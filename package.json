@@ -1,0 +1,25 @@
+{
+    "name": "http-trace-propagation",
+    "version": "1.0.0",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "concurrently 'yarn start:serviceA' 'yarn start:serviceB'",
+      "start:serviceA": "node serviceA.js",
+      "start:serviceB": "node serviceB.js"
+    },
+    "dependencies": {
+      "@opentelemetry/api": "^1.3.0",
+      "@opentelemetry/core": "~1.7.0",
+      "@opentelemetry/context-async-hooks": "~1.7.0",
+      "@opentelemetry/exporter-jaeger": "^1.7.0",
+      "@opentelemetry/instrumentation": "^0.33.0",
+      "@opentelemetry/instrumentation-http": "^0.33.0",
+      "@opentelemetry/sdk-node": "~0.33.0",
+      "@opentelemetry/sdk-trace-base": "~1.7.0",
+      "@opentelemetry/resources": "^1.7.0",
+      "@opentelemetry/semantic-conventions": "^1.7.0"
+    },
+    "devDependencies": {
+      "concurrently": "^7.6.0"
+    }
+  }
